@@ -8,7 +8,7 @@ export default {
       type: 'string',
       title: 'title'
     },
-     {
+    {
       name: 'content',
       title: 'Content',
       type: 'array',
@@ -35,6 +35,11 @@ export default {
           ]
         }
       ]
+    },
+    {
+      name: 'metadesc',
+      type: 'string',
+      title: 'Meta Description'
     },
     {
       title: 'BlogImage',
@@ -66,6 +71,18 @@ export default {
         timeStep: 15,
         calendarTodayLabel: 'Today'
       }
+    },
+    {
+      name: 'author',
+      type: 'object',
+      fields: [
+        {
+          title: 'Author',
+          name: 'author',
+          type: 'reference',
+          to: [{type: 'author'}]
+        }
+      ]
     }
   ]
 }
